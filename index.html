@@ -830,8 +830,38 @@ background:linear-gradient(225deg, rgb(98 55 18) 41%, rgba(231, 120, 23, 1) 41%)
             window.open(url, "_blank").focus();
         }
     </script>
+<script>
+    // Disable F12, Ctrl+Shift+I, and Ctrl+Shift+J
+    document.addEventListener('keydown', function (e) {
+        // F12 key
+        if (e.key === 'F12') {
+            e.preventDefault();
+        }
+        // Ctrl + Shift + I / J (inspect)
+        if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J'))) {
+            e.preventDefault();
+        }
+    });
+</script>
+<script>
+    // Disable Ctrl + U (View Page Source)
+    document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && e.key === 'u') {
+            e.preventDefault();
+            alert('Ctrl+U is disabled!');
+        }
+    });
+</script>
+<script>
+    // Disable Right-Click
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        alert('Right-click is disabled!');
+    });
 
-
+    // Disable Left-Click (Mouse Button 0 is the left button)
+   
+</script>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
