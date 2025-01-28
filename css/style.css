@@ -727,3 +727,12 @@
     opacity: 0.8;
 }
  
+.vd_hei{
+    height: 600px;
+}
+
+@media screen and (max-width:768px) {
+    .vd_hei{
+        height: 1300px;
+    }
+}
